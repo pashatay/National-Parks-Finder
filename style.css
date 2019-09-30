@@ -1,0 +1,40 @@
+body{
+    font-family: 'Be Vietnam', sans-serif;
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1{
+  text-align: center;
+  color: rgb(2, 71, 38);
+}
+
+form{
+    display: block;
+    width: auto;
+    height: auto;
+    color: rgb(2, 71, 38);
+    font-size: 20px;
+    margin: 10% auto;
+    text-align: center;
+}
+label{
+    display: block;
+}
+h2{
+    text-align: center;
+    color: rgb(2, 71, 38);
+}
+ol li{
+    color: rgb(1, 37, 20);
+}
+.chosen-select {
+    width: 150px;
+    
+   
+}
+.chosen-container{
+    border: 2px solid rgb(1, 54, 28);
+    background: red;  
+}
