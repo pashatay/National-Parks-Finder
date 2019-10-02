@@ -1,3 +1,4 @@
+'use strict';
 const apiKey = 'gP4dSaZz79eAIkfcWskg6mFfCaUbKcTx7fONM9Em';
 
 
@@ -21,7 +22,7 @@ function displayResults(responseJson) {
     $('#results-list').append(
       `<li><h3>${responseJson.data[i].fullName}</h3>
       <p>${responseJson.data[i].description}</p>
-      <h4><a href='${responseJson.data[i].url}'>Learn more</a></h4>
+      <h4><a href='${responseJson.data[i].url}' target="_blank">Learn more</a></h4>
       </li>`
     )};
   $('#results').removeClass('hidden');
@@ -53,24 +54,10 @@ function getParks(query, maxResults=10) {
 function watchForm() {
   $('form').submit(event => {
     event.preventDefault();
-    const searchTerm = listStatesParam(states);
+    const searchTerm = $('.chosen-select').val().join(',');
     const maxResults = $('#js-max-results').val();
     getParks(searchTerm, maxResults);
   });
 }
-
-
-
-const states =  $('.chosen-choices').find('.search-choice');
-
-function listStatesParam(x){
-const statesArr=[];
- for(let i=0; i<x.length; i++){
-     let state = x[i].textContent;
-     statesArr.push(state);
-}
-return statesArr.join(',');
-}
-
 
 $(watchForm);
